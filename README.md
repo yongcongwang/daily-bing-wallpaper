@@ -35,4 +35,4 @@ crontab -e
 ```
 
 ### Bugs
-`crontab` may not work even though we have set the job. If that happens, you can set `~/Pictures/wallpaper.jpg` as wallpaer in your `system settings`. `wallpaper.jpg` is a soft-link that always links to the latest bing-wallpaper.
+`crontab` may not work in `Unity`, even though we have set the job. If that happens, you can set `~/Pictures/wallpaper.jpg` as wallpaer in your `system settings`. `wallpaper.jpg` is a soft-link that always links to the latest bing-wallpaper.
