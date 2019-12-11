@@ -31,7 +31,7 @@ function set_wallpaper() {
     rm ${WALLPAPER_PATH}/wallpaper.jpg
   fi
   ln -s ${IMAGE_NAME} ${WALLPAPER_PATH}/wallpaper.jpg
-  gsettings set org.gnome.desktop.background picture-uri file://${IMAGE_NAME}
+  gsettings set org.gnome.desktop.background picture-uri file://${WALLPAPER_PATH}/wallpaper.jpg
 }
 
 function main() {

@@ -5,10 +5,7 @@ A script to download and set daily bing image as wallpaper
 I test the script in `Ubuntu 18.04LTS`, and it works fine.
 
 ## Install
-Just pull the repo:
-```
-git clone git@github.com:yongcongwang/daily-bing-wallpaper.git
-```
+No need to install.
 
 ## Usage
 
@@ -16,7 +13,7 @@ There are two ways to use this script:
 
 ### Manually
 ```
-bash daily-bing-wallpaper/daily_bing_wallpaper.sh
+bash -c "$(curl -f https://raw.githubusercontent.com/yongcongwang/daily-bing-wallpaper/master/daily_bing_wallpaper.sh)"
 ```
 
 This will download today's bing wallpaper to `~/Pictures/bing` folder as `${DATE}.jpg` file. 
@@ -31,8 +28,8 @@ crontab -e
 2. add the job at the bottom, for example, run the script every 3 hours:
 
 ```
- * */3 * * * bash /home/wyc/daily-bing-wallpaper/daily_bing_wallpaper.sh 
+* */3 * * * bash -c "$(curl -f https://raw.githubusercontent.com/yongcongwang/daily-bing-wallpaper/master/daily_bing_wallpaper.sh)"
 ```
 
 ### Bugs
-`crontab` may not work in `Unity`, even though we have set the job. If that happens, you can set `~/Pictures/wallpaper.jpg` as wallpaer in your `system settings`. `wallpaper.jpg` is a soft-link that always links to the latest bing-wallpaper.
+May not work in `Unity`, even though I have set the job. If that happens, you can set `~/Pictures/wallpaper.jpg` as wallpaer in your `system settings`. `wallpaper.jpg` is a soft-link that always links to the latest bing-wallpaper.
